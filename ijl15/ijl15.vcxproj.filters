@@ -27,6 +27,9 @@
     <ClInclude Include="MsCRC.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
+    <ClInclude Include="MultiMs.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

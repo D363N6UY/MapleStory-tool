@@ -1,11 +1,15 @@
 // dllmain.cpp : 定義 DLL 應用程式的進入點。
 #include "stdafx.h"
 #include "MsCRC.h"
+#include "MultiMs.h"
 
 BOOL WINAPI Injected()
 {
 	//Waitting fo Maplestory.exe load
 	Sleep(3000);
+	//多開
+	MultiClient();
+	//HS Bypass
 	MsCrcBypass();
 	return TRUE;
 }
