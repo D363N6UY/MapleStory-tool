@@ -15,5 +15,5 @@ BTC 1CrP72HFkXV1QVRMWgbqde2nDVmLkez6PM
 
 2.多開
 
-沒了
+3.移除傷害限制(破功)
 
