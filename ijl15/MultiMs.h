@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include <winternl.h>
-#include <cstdlib>
+
 bool MultiClient() {
 
 	struct SYSTEM_HANDLE_INFORMATION {

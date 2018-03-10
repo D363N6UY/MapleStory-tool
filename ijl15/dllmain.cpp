@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include "MsCRC.h"
 #include "MultiMs.h"
+#include "MsPatch.h"
 
 BOOL WINAPI Injected()
 {
@@ -11,6 +12,8 @@ BOOL WINAPI Injected()
 	MultiClient();
 	//HS Bypass
 	MsCrcBypass();
+	//Patch function
+	No_Cap();
 	return TRUE;
 }
 

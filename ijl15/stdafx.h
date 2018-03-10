@@ -10,6 +10,7 @@
 #define WIN32_LEAN_AND_MEAN             // 從 Windows 標頭排除不常使用的成員
 // Windows 標頭檔: 
 #include <windows.h>
+#include <cstdlib>
 
 
 

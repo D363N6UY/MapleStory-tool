@@ -5,8 +5,8 @@
 #define jmp(frm, to) (int)(((int)to - (int)frm) - 5)
 
 
-const unsigned long ulMsCrcStart = 0x00401000; //static
-unsigned long ulMsCrcEnd = ulMsCrcStart; //modify as needed
+DWORD  ulMsCrcStart = 0x00401000; //static
+DWORD  ulMsCrcEnd = ulMsCrcStart; //modify as needed
 void* Allocation;
 
 
@@ -49,14 +49,14 @@ void MsCrcBypass()
 			memcpy(Allocation, (void*)ulMsCrcStart, ulMsCrcEnd - ulMsCrcStart);
 
 			//inline call
-			*(unsigned char*)ulMsCrc = 0xE8;
-			*(unsigned long*)(ulMsCrc + 1) = jmp(ulMsCrc, MsCrcAsm);
-			*(unsigned char*)(ulMsCrc + 5) = 0x90;
+			*(BYTE*)ulMsCrc = 0xE8;
+			*(DWORD*)(ulMsCrc + 1) = jmp(ulMsCrc, MsCrcAsm);
+			*(BYTE*)(ulMsCrc + 5) = 0x90;
 
 			//Skip HS
-			*(unsigned char*)0x00A11996 = 0xEB;
-			*(unsigned char*)0x00A6D7F6 = 0xC3;
-			*(unsigned char*)0x00A6D834 = 0xC3;
+			*(BYTE*)0x00A11996 = 0xEB;
+			*(BYTE*)0x00A6D7F6 = 0xC3;
+			*(BYTE*)0x00A6D834 = 0xC3;
 			return;
 		}
 	}
