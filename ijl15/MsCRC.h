@@ -4,9 +4,10 @@
 // 在此修改版本
 #define MsVer 120
 
-const unsigned long ulMsCrcStart = 0x00401000; // static
-unsigned long ulMsCrcEnd = ulMsCrcStart; // modify as needed
+DWORD ulMsCrcStart = 0x00401000; // static
+DWORD ulMsCrcEnd = ulMsCrcStart; // modify as needed
 void* Allocation;
+#define jmp(frm, to) (int)(((int)to - (int)frm) - 5)
 
 #if MsVer == 113
 #define CrcAddress 0x00A11481
