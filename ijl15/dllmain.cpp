@@ -7,13 +7,13 @@
 BOOL WINAPI Injected()
 {
 	//Waitting fo Maplestory.exe load
-	Sleep(3000);
+	Sleep(5000);
 	//¦h¶}
 	MultiClient();
 	//HS Bypass
 	MsCrcBypass();
 	//Patch function
-	No_Cap();
+	// No_Cap();
 	return TRUE;
 }
 
