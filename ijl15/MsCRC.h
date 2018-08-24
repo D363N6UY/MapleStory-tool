@@ -39,7 +39,7 @@ void __declspec(naked) MsCrcAsm()
 			lea eax, [esi + edx * 4]
 			cmp eax, [ulMsCrcStart]
 			jb Normal
-			cmp eax, [0x00CC0000]
+			cmp eax, [0x00C01000]
 			jae Normal
 			mov esi, Allocation
 
