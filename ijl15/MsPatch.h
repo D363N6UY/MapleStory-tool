@@ -3,7 +3,7 @@
 
 void No_Cap() {
 	#if MsVer == 113
-		DWORD No_CapAddr = 0x00B1CE26;
+		DWORD No_CapAddr = 0x00B1CE28;
 		*(double*)No_CapAddr = 300000.0;
 	#elif MsVer == 120
 		double *DamageCap = new double(300000.00);
